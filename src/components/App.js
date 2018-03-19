@@ -1,5 +1,6 @@
 import React from 'react'
 import { post } from 'axios'
+import Table from './table'
 
 export default class App extends React.Component {
 
@@ -17,16 +18,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    let
-      { value, data } = this.state,
-      map_data = Object.keys(data).sort().map((item, i) => (
-        <tbody key={i} >
-          <tr>
-            <td>{item}</td>
-            <td>{item.length}</td>
-          </tr>
-        </tbody>
-      ))
+    let { value, data } = this.state
 
     return (
       <div>
@@ -41,17 +33,7 @@ export default class App extends React.Component {
           <input type='button' onClick={this.clicked} value='Click' />
         </div>
 
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <th>Word</th>
-                <th>Cccurence</th>
-              </tr>
-            </tbody>
-            { map_data }
-          </table>
-        </div>
+        <Table data={data} />
 
       </div>
     )

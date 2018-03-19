@@ -2,9 +2,9 @@ const occurence = require('./utils')
 
 describe('occurence()', () => {
 
-  it('should return type object', () => {
+  it('should return type object', () =>
     expect(typeof occurence(['Hello', 'World!!'])).toBe('object')
-  })
+  )
 
   it('Should return below result', () => {
     let

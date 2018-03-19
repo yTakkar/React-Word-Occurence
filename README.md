@@ -30,3 +30,7 @@
 9. eslint
 10. babel
 11. jest
+
+# React Components
+1. App [Top react component]
+2. Table [For displaying table of word occurence]
